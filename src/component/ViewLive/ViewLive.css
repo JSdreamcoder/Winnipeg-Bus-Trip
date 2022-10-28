@@ -1,0 +1,153 @@
+.map-container {
+  height: 100vh;
+}
+
+.Map-SearchBox {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  width: 700px;
+}
+.TripBox {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Map-SearchForm {
+  display: flex;
+  padding: 2px;
+  border-radius: 5px;
+  height: 35px;
+  width: 250px;
+}
+.SearchList-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 10px;
+}
+.SearchList {
+  margin-bottom: -1px;
+  width: 250px;
+  padding: 4px;
+}
+.SearchList li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+.SearchList li:hover {
+  background-color: rgb(221, 221, 221);
+  cursor: pointer;
+}
+.Map-Input {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  width: 200px;
+
+  border-radius: inherit;
+}
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 10px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Map-button {
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.UserLocationSearch {
+  width: 185px;
+}
+.UserLocationIcon {
+  width: 50px;
+}
+.divide {
+  width: 50px;
+}
+.km {
+  margin-top: 4px;
+  margin-left: 3px;
+  margin-right: 5px;
+}
+.Map-divide {
+  color: gray;
+
+  margin-top: 4px;
+}
+.Map-divide-container {
+  width: 20px;
+}
+
+.Direction-Container {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.DirectionWayButton {
+  width: 85%;
+  height: 50px;
+  padding: 5px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+  border-radius: inherit;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.DirectionWayButton:hover {
+  background-color: rgb(206, 206, 206);
+}
+
+.DropdownItem {
+  font-size: 11px;
+}
