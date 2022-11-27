@@ -4,7 +4,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 
 import "./ViewLive.css";
 const Trips = ({ trip }) => {
-  console.log(trip);
+  // console.log(trip);
   return (
     <>
       <DropdownButton
@@ -12,7 +12,7 @@ const Trips = ({ trip }) => {
         id="dropdown-menu-align-responsive-1"
       >
         {trip.segments.map((el, index) => {
-          console.log(`in foreach index:${index}`);
+          // console.log(`in foreach index:${index}`);
           if (index === trip.segments.length - 1) {
             return (
               <div className="DropdownItem">
@@ -23,7 +23,7 @@ const Trips = ({ trip }) => {
               </div>
             );
           } else if (el.type === "walk") {
-            console.log("walk");
+            // console.log("walk");
             return (
               <div className="DropdownItem">
                 <Dropdown.Item href="#/action-2">

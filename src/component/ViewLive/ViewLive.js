@@ -31,7 +31,7 @@ const ViewLive = () => {
   const [userLocationQuery, setUserLocationQuery] = useState("");
   const [userLocationQueryResult, setUserLocationQueryResult] = useState([]);
   const [userCurrent, setUserCurrent] = useState([]);
-  const [radiusValue, setRadiusValue] = useState(5);
+  const [radiusValue, setRadiusValue] = useState(10);
   const [destination, setDestination] = useState([]);
   const [tripPlans, setTripPlans] = useState([]);
   useEffect(() => {
@@ -460,14 +460,14 @@ const ViewLive = () => {
 
   const handleSearchVendorSubmit = (e) => {
     e.preventDefault();
-
-    if (isVendorLocationLayer.current == true) {
+    setTripPlans([]);
+    if (isVendorLocationLayer.current === true) {
       map.current.removeLayer("vendorLocations");
       map.current.removeSource("vendorLocations");
     }
-    if (geoData.features.length == 0) return;
+    if (geoData.features.length === 0) return;
 
-    if (geoData.features.length == 1) {
+    if (geoData.features.length === 1) {
       getVendorMarkers();
       map.current.flyTo({
         center: geoData.features[0].geometry.coordinates,
@@ -488,6 +488,7 @@ const ViewLive = () => {
     isVendorLocationLayer.current = true;
   };
   const handleClickVendorSearch = (location) => {
+    setTripPlans([]);
     if (isVendorLocationLayer.current) {
       map.current.removeLayer("vendorLocations");
       map.current.removeSource("vendorLocations");
@@ -528,7 +529,7 @@ const ViewLive = () => {
   };
   return (
     <>
-      <div className="TripBox" trips={tripPlans}>
+      <div className="TripBox">
         <div>Bus Trip</div>
         {tripPlans.map((trip) => {
           return (
