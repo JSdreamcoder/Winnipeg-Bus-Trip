@@ -31,7 +31,7 @@ const ViewLive = () => {
   const [userLocationQuery, setUserLocationQuery] = useState("");
   const [userLocationQueryResult, setUserLocationQueryResult] = useState([]);
   const [userCurrent, setUserCurrent] = useState([]);
-  const [radiusValue, setRadiusValue] = useState(1);
+  const [radiusValue, setRadiusValue] = useState(5);
   const [destination, setDestination] = useState([]);
   const [tripPlans, setTripPlans] = useState([]);
   useEffect(() => {
